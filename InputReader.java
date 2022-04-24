@@ -29,10 +29,15 @@ public class InputReader
      *          words typed by the user
      */
     public HashSet<String> getInput() 
-    {
-        System.out.print("> ");                // print prompt
-        String inputLine = reader.nextLine().trim().toLowerCase();
-
+    {  
+        String inputLine ="", nextLine;
+        while (reader.hasNextLine()) {
+            nextLine = reader.nextLine().trim().toLowerCase();
+            if (nextLine.equals(""))
+                break;
+            inputLine = inputLine +" "+ nextLine;
+        } 
+        System.out.println("> "+ inputLine);
         String[] wordArray = inputLine.split(" ");  // split at spaces
 
         // add words from array into hashset 
