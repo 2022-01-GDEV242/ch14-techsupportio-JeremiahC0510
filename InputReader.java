@@ -31,14 +31,15 @@ public class InputReader
     public HashSet<String> getInput() 
     {  
         String inputLine ="";
+        System.out.println("> "+ inputLine);
         while (reader.hasNextLine()) {
             String nextLine = reader.nextLine().trim().toLowerCase();
+            //If there is no more in next line loop breaks
             if (nextLine.equals(""))
-                break; //Tells the input line that it is complete
+                break;
             inputLine = inputLine +" "+ nextLine;
         } 
-        System.out.println("> "+ inputLine);
-    
+        
         String[] wordArray = inputLine.split(" ");  // split at spaces
 
         // add words from array into hashset 
