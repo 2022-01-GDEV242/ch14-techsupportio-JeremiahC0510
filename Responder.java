@@ -14,8 +14,8 @@ import java.util.*;
  * in the HashMap, the corresponding response is returned. If none of the input
  * words is recognized, one of the default responses is randomly chosen.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @author Jeremiah Curtis
+ * @version 04.24.22
  */
 public class Responder
 {
@@ -69,6 +69,7 @@ public class Responder
     private void fillResponseMap()
     {
         try {
+        //File response is a file from responses.txt
         File response = new File(FILE_OF_RESPONSES);
         //create new scanner called reader to read the responses.txt file
         Scanner reader = new Scanner(response);
